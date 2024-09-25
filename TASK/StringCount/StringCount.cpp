@@ -92,18 +92,12 @@ int main()
 
 
 
-
 	//다른 방식(함수)사용
 	int strCountSize = sizeof(strings) / sizeof(char);
 	int strCountsizeArr = sizeof(strings) / sizeof(strings[0]);//이둘은 같다 
 
 	//string 배열 초기화
 	std::string stringS[] = { "Hello","World", ",","C++","123" };
-
-
-
-
-
 
 
 
