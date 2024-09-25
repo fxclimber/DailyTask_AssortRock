@@ -4,8 +4,8 @@
 class Player
 {
 public:
-    Player();
-    ~Player();
+    //Player();
+    //~Player();
 
     void CreateWeapon(){}
     void Attack(){}
@@ -58,11 +58,11 @@ int main()
 
     return  0;
 }
-
-Player::Player()
-{
-}
-
-Player::~Player()
-{
-}
+//
+//Player::Player()
+//{
+//}
+//
+//Player::~Player()
+//{
+//}
