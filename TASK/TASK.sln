@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TEXTRPG_Class", "TEXTRPG_Cl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TEXTRPG_Func", "TEXTRPG_Func\TEXTRPG_Func.vcxproj", "{88BEA050-5065-4573-91A2-69F026B99588}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TEXTRPG_Game", "TEXTRPG_Game\TEXTRPG_Game.vcxproj", "{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{88BEA050-5065-4573-91A2-69F026B99588}.Release|x64.Build.0 = Release|x64
 		{88BEA050-5065-4573-91A2-69F026B99588}.Release|x86.ActiveCfg = Release|Win32
 		{88BEA050-5065-4573-91A2-69F026B99588}.Release|x86.Build.0 = Release|Win32
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Debug|x64.ActiveCfg = Debug|x64
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Debug|x64.Build.0 = Debug|x64
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Debug|x86.ActiveCfg = Debug|Win32
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Debug|x86.Build.0 = Debug|Win32
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Release|x64.ActiveCfg = Release|x64
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Release|x64.Build.0 = Release|x64
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Release|x86.ActiveCfg = Release|Win32
+		{FA9CE9AD-B70C-4E58-B6C6-3236E7E2702F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
