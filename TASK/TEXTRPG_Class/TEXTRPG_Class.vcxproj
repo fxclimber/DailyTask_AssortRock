@@ -127,7 +127,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EngineConst.cpp" />
+    <ClCompile Include="EngineDebug.cpp" />
+    <ClCompile Include="FightUnit.cpp" />
+    <ClCompile Include="FightZone.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="StatusUnit.cpp" />
     <ClCompile Include="TEXTRPG_Class.cpp" />
+    <ClCompile Include="Town.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Zone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineConst.h" />
+    <ClInclude Include="EngineDebug.h" />
+    <ClInclude Include="FightUnit.h" />
+    <ClInclude Include="FightZone.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="StatusUnit.h" />
+    <ClInclude Include="Town.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Zone.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

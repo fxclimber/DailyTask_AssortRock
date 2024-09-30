@@ -1,22 +1,103 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="00.Base">
+      <UniqueIdentifier>{1f93e170-39b6-4062-b0d8-8df950bb800f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="02.Contents">
+      <UniqueIdentifier>{90dbe28e-35eb-49c9-96ca-5539100c6f64}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="01.Engine">
+      <UniqueIdentifier>{da1561c2-d491-43c4-a195-4866dadaf39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Contents\1.Actor">
+      <UniqueIdentifier>{077e5813-973d-480b-82af-a78302f122cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Contents\1.Actor\Components">
+      <UniqueIdentifier>{dba6d8d4-5430-4b3a-9699-3452f76ebab5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Contents\2.Map">
+      <UniqueIdentifier>{2cabea39-af6b-4b08-a436-6dd2468d3615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Contents\0.ContentsBase">
+      <UniqueIdentifier>{2a2d145e-f716-4eb0-8776-8d9456d7a236}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TEXTRPG_Class.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="TEXTRPG_Class.cpp" />
+    <ClCompile Include="EngineConst.cpp">
+      <Filter>00.Base</Filter>
     </ClCompile>
+    <ClCompile Include="EngineDebug.cpp">
+      <Filter>00.Base</Filter>
+    </ClCompile>
+    <ClCompile Include="FightZone.cpp">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>02.Contents\1.Actor\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>02.Contents\1.Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>02.Contents\1.Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>01.Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="FightUnit.cpp">
+      <Filter>02.Contents\0.ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusUnit.cpp">
+      <Filter>02.Contents\0.ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Town.cpp">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineConst.h">
+      <Filter>00.Base</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineDebug.h">
+      <Filter>00.Base</Filter>
+    </ClInclude>
+    <ClInclude Include="FightZone.h">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>02.Contents\1.Actor\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>02.Contents\1.Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>02.Contents\1.Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>01.Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="FightUnit.h">
+      <Filter>02.Contents\0.ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusUnit.h">
+      <Filter>02.Contents\0.ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Town.h">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>02.Contents\2.Map</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

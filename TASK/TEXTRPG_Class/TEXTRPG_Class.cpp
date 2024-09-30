@@ -1,9 +1,16 @@
-﻿// TEXTRPG_Class.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
-//
-
-#include <iostream>
+﻿#include <iostream>
+#include "Player.h"
+#include "Monster.h"
+#include "Item.h"
+#include <conio.h>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Player* myPlayer;
+	Player player1;
+	Player newPlayer = Player();
+
+
+	return 0;
 }
+

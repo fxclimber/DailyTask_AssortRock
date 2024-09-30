@@ -17,7 +17,8 @@ protected:
 
 class Item
 {
-
+public:
+    Item(){}
 };
 
 class Inventory
@@ -78,9 +79,14 @@ class Monster : public FightUnit
 {
 
 };
+void TEst11(); void TEst11(); void TEst11(); void TEst11(); void TEst11(); void TEst11();
 
 int main()
 {
+    TEst11();
+
+    int test = 100;
+
     int seed = static_cast<__int64>(time(nullptr));
     srand(seed*1212);
 
@@ -94,7 +100,15 @@ int main()
     std::cout << ReadHp << std::endl;
     }
 
+    Item item= Item();
+
+    sizeof(item);
+
     int a = 0;
+
+    int b = 1;
+
+    10 - b;
 }
 
 
