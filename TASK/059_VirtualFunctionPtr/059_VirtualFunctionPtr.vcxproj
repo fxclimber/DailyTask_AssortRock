@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a32f3671-362e-4194-974f-9ba01cbece38}</ProjectGuid>
-    <RootNamespace>TEXTRPGClass</RootNamespace>
+    <ProjectGuid>{0f3c261b-c1c1-4c0e-bc6b-305a056ea841}</ProjectGuid>
+    <RootNamespace>My059VirtualFunctionPtr</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,7 +104,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,33 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EngineConst.cpp" />
-    <ClCompile Include="EngineDebug.cpp" />
-    <ClCompile Include="FightUnit.cpp" />
-    <ClCompile Include="FightZone.cpp" />
-    <ClCompile Include="Item.cpp" />
-    <ClCompile Include="Monster.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="StatusUnit.cpp" />
-    <ClCompile Include="TEXTRPG_Class.cpp" />
-    <ClCompile Include="Town.cpp" />
-    <ClCompile Include="World.cpp" />
-    <ClCompile Include="Zone.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EngineConst.h" />
-    <ClInclude Include="EngineDebug.h" />
-    <ClInclude Include="FightUnit.h" />
-    <ClInclude Include="FightZone.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="Monster.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="StatusUnit.h" />
-    <ClInclude Include="Town.h" />
-    <ClInclude Include="World.h" />
-    <ClInclude Include="Zone.h" />
+    <ClCompile Include="059_VirtualFunctionPtr.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
