@@ -1,6 +1,15 @@
 #pragma once
+#include "Object.h"
+#include "StatusUnit.h"
+#include "FightUnit.h"
 
-class Actor
+
+class AActor : public UObject , public UStatusUnit , public UFightUnit
 {
+public:
+	void StatusRender();
+
+	virtual void StatusTextRender(){}
+
 };
 
