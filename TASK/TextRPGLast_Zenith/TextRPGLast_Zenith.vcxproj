@@ -133,8 +133,10 @@
     <ClCompile Include="BlackSmith.cpp" />
     <ClCompile Include="FightUnit.cpp" />
     <ClCompile Include="FightZone.cpp" />
+    <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="StatusUnit.cpp" />
     <ClCompile Include="TextRPGCore.cpp" />
@@ -154,8 +156,10 @@
     <ClInclude Include="Enums.h" />
     <ClInclude Include="FightUnit.h" />
     <ClInclude Include="FightZone.h" />
+    <ClInclude Include="Goblin.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Orc.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="StatusUnit.h" />
     <ClInclude Include="TextRPGCore.h" />

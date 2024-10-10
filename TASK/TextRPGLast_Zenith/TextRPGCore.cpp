@@ -1,9 +1,17 @@
 #include "TextRPGCore.h"
 #include "Player.h"
 #include "World.h"
+#include <iostream>
 
 //플레이어 1명, 다른 사람이 만들수도 있으나, 만들기 금지!
-UPlayer MainPlayer;
+APlayer MainPlayer;
+UWorld World;
+
+APlayer& TextRPGCore::GetPlayer()
+{
+	return MainPlayer;
+}
+
 
 
 TextRPGCore::TextRPGCore()
@@ -13,9 +21,11 @@ TextRPGCore::TextRPGCore()
 
 void TextRPGCore::Start()
 {
-}
+	srand(static_cast<unsigned int>(time(nullptr)));
+	MainPlayer.SetName("MainPlayer");
+	MainPlayer.BeginPlay();
 
-UPlayer& TextRPGCore::GetPlayer()
-{
-	// TODO: insert return statement here
+	World.ZoneInit();
+	World.PlayerZonePlay();
+
 }

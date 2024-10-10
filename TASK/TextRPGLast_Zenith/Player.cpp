@@ -1,7 +1,7 @@
 #include "Player.h"
 #include <iostream>
 
-UPlayer::UPlayer()
+APlayer::APlayer()
 {
 	UObject* ObjectPtr = this;
 	UStatusUnit* StatusUnitPtr = this;
@@ -9,7 +9,7 @@ UPlayer::UPlayer()
 }
 
 
-void UPlayer::StatusTextRender()
+void APlayer::StatusTextRender()
 {
 	printf_s("");
 	printf_s("");

@@ -2,10 +2,10 @@
 #include "Actor.h"
 
 
-class UPlayer : public AActor
+class APlayer : public AActor
 {
 public:
-	UPlayer();
+	APlayer();
 
 	inline int GetEquipAtt()const
 	{
