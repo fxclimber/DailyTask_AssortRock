@@ -9,6 +9,7 @@
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="Enums.cpp" />
+    <ClCompile Include="GlobalValue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleWindow.h" />
@@ -18,6 +19,7 @@
       <Filter>Contents</Filter>
     </ClInclude>
     <ClInclude Include="Enums.h" />
+    <ClInclude Include="GlobalValue.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Contents">

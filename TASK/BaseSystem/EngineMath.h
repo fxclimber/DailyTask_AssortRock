@@ -6,7 +6,8 @@ public:
 	int X = 0;
 	int Y = 0;
 
-	static const FIntPoint LEFT;
+
+	static const FIntPoint LEFT ;
 	static const FIntPoint RIGHT;
 	static const FIntPoint UP;
 	static const FIntPoint DOWN;

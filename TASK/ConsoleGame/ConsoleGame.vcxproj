@@ -134,6 +134,7 @@
     <ClCompile Include="ConsoleImage.cpp" />
     <ClCompile Include="ConsoleWindow.cpp" />
     <ClCompile Include="Enums.cpp" />
+    <ClCompile Include="GlobalValue.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +142,7 @@
     <ClInclude Include="ConsoleImage.h" />
     <ClInclude Include="ConsoleWindow.h" />
     <ClInclude Include="Enums.h" />
+    <ClInclude Include="GlobalValue.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
