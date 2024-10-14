@@ -10,6 +10,15 @@
     </ClCompile>
     <ClCompile Include="Enums.cpp" />
     <ClCompile Include="GlobalValue.cpp" />
+    <ClCompile Include="Actor.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleWindow.h" />
@@ -20,6 +29,15 @@
     </ClInclude>
     <ClInclude Include="Enums.h" />
     <ClInclude Include="GlobalValue.h" />
+    <ClInclude Include="Actor.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Contents">

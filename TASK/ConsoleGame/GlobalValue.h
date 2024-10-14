@@ -8,6 +8,9 @@ public:
 	//윈도우가 몇개인가
 	static FIntPoint WindowSize;
 
+	static UConsoleWindow* WindowPtr;
+
+	static ConsoleImage* BackBuffer;
 
 };
 
