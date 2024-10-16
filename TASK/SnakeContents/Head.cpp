@@ -9,6 +9,7 @@
 #include <EngineCore/Renderer.h>
 #include <EngineCore/ConsoleEngine.h>
 #include <EngineCore/ConsoleWindow.h>
+#include <EngineCore/ConsoleImage.h>
 
 // ÄÁÅÙÃ÷
 #include "Body.h"
