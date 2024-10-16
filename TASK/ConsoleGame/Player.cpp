@@ -61,9 +61,6 @@ void Player::Tick()
 			break;
 		}
 	}
-
-
-
 }
 
 void Player::Render(ConsoleImage* _BackBuffer)
