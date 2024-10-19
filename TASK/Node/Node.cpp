@@ -1,75 +1,68 @@
 ﻿#include <iostream>
 
-//-------------- 자료구조 구분 방식 -------------------- 
-//2가지 메모리구분 - 노드형(트리형), 배열형(메모리에 각자를 붙여서,"갯수*자료형크기"의 메모리할당)
-//3가지 컨테이너 - list, vector, map
-
-// [1][2][0] 을 받아서
-// [1][2][0] 그대로 배치 -> vector
-// [0][1][2] 정렬해서 배치 -> sorted list
-
-
-//연관 map
-//시퀀스 list vector
-//어댑터
-
-//-------- 노드형 -------------------------------------
-// 게임에서 가장 많이 사용된 데이타형태
-
-
-class Node
+//단일 연결 자료구조의 노드 클래스
+template <typename type>
+class SingleLinkedNode
 {
-	Node* LinkedNode[10];
-};
-
-//-------- 게임의 맵이 노드구조의 대표 ---------------------
-class Zone
-{
-private:
-	//정적 배열,정적배열,코드실행후 바꿀수 없는
-	// 정적 바인딩경우, 문제 : 만약1개만 만들었고, 나머지4개는 낭비가 되고,객체도 바꾸고 싶다면? -> 동적 생성
-	Zone* LinkZone[5] = {};
 public:
-	void Link(Zone* _Link)
-	{
-
-	}
-
+	type data;				//노드가 저장하는 데이타
+	SingleLinkedNode* next;	//다음 노드를 가리키는 포인터
+	//생성자
+	SingleLinkedNode(type value): data(value), next(nullptr){}
+	void test(){}
 };
 
-class FightZone : public Zone
+
+
+//이중 연결 자료구조의 노드클래스
+template<typename type>
+class DoubleLinkedNode
 {
-
+public:
+	type data;				//노드가 저장한 데이타
+	DoubleLinkedNode* next;	//다음 노드
+	DoubleLinkedNode* prev;	//이전 노드
+	// initializer list 사용이유
+	DoubleLinkedNode(type value) : data(value), next(nullptr), prev(nullptr){}
+	// 빈객체를 생성하면, 포인터변수들이 초기화되지않아 nullptr가 아닌,임의의 값을 가리켜 오류
+	DoubleLinkedNode() : next(nullptr), prev(nullptr) {}
+	//DoubleLinkedNode() {}//빈 생성자 이거 추가하면 중복정의되니까 잠깐 주석 
 };
 
-class Town : public FightZone
-{
-
-};
-//---------------------------------------------------
-class Sword
-{
-
-};
-class Shop
-{
-	Sword* sword;
-};
-
-class Player
-{
-	Player* player;
-	Sword* sword;
-};
 
 int main()
 {
-	//게임 시작할때 맵 생성 , 앞으로 더 생성되는것이 아니라, 그곳으로 이동하는것이다!
-	// 이 개념은 다른 컨텐츠에도 동일 - 무기를 산다고 할때, 상점에서 무기를 가져오는것이지, 내 클래스에서 무기를 만드는것이 아니다.
-	// 다른 객체를 포인터 또는 참조로 만드는 이유!
-	Town town;
-	FightZone fightZone;
+	//템플릿 클래스 객체 생성
+	//1.기본
+	SingleLinkedNode<int> statics =SingleLinkedNode<int>(1);
+	SingleLinkedNode<int>(1);
+	statics.data;
+	statics.test();
+
+	//2.동적 new~delete
+	SingleLinkedNode<int>* news= new SingleLinkedNode<int>(10);
+	news->test();
+	news->data;
+	
+	//3.속빈 생성자
+	DoubleLinkedNode<int> staticd = DoubleLinkedNode<int>();
+	staticd.data;
+	staticd.next;
+
+	//단일 노드
+	SingleLinkedNode<int> nodes1(1);
+	SingleLinkedNode<int> nodes2(10);
+	nodes1.next = &nodes2;
+	
+
+	//이중 노드
+	DoubleLinkedNode<int> noded1(2);
+	DoubleLinkedNode<int> noded2(20);
+	noded1.next = &noded2;
+	noded2.prev = &noded1;//서로 연결됨 
 
 
+
+	return 0;
 
 }
