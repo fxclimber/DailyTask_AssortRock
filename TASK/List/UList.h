@@ -1,9 +1,9 @@
 #pragma once
 #include "assert.h"
 
-typedef int DataType;
+//typedef int DataType;
 
-//template<typename DataType>
+template<typename DataType>
 class UList
 {
 public:
