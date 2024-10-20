@@ -34,9 +34,6 @@ void UConsoleWindow::ScreenRender()
 
 	for (size_t y = 0; y < Point.Y; y++)
 	{
-		// 복사가 일어납니다. 느려진다.
-		// 왜이렇게 느리지? 
-		// std::vector<char> Line = BackBuffer.GetLine(y);
 		std::vector<char>& Line = BackBuffer.GetLineRef(y);
 		char* Ptr = &Line[0];
 		printf_s(Ptr);

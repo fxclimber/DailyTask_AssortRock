@@ -41,3 +41,9 @@ void AActor::AddActorLocation(FIntPoint _Dir)
 {
 	Pos += _Dir;
 }
+
+void AActor::Destroy()
+{
+	DestoryValue = true;
+	return;
+}

@@ -32,8 +32,9 @@ void ConsoleEngine::Start(class UserInit* _Init)
 
 	while (true == Engine.EngineActive)
 	{
-		Engine.Tick();
+		Engine.Tick(); 
 		Engine.Render();
+		Engine.Release(); // 한프레임의 모든 과정이 끝났을때
 		Sleep(250);
 	}
 
@@ -53,20 +54,26 @@ void ConsoleEngine::BeginPlay()
 {
 	Window = new UConsoleWindow();
 	Window->BeginPlay();
-
-	// 대리객체 방법이 있습니다.
-
-	// 나중에 배우겠습니다.
-	// 함수포인터로 하는법
 	Window->SetScreenSize({10, 10});
 }
 
 void ConsoleEngine::Tick()
 {
-	for (size_t i = 0; i < AllActorVector.size(); i++)
+	std::list<class AActor*>::iterator StartIter = AllActors.begin();
+	std::list<class AActor*>::iterator EndIter = AllActors.end();
+
+	for (; StartIter != EndIter; ++StartIter)
 	{
-		AllActorVector[i]->Tick();
+		AActor* CurActor = *StartIter;
+
+		if (false == CurActor->IsTickable())
+		{
+			continue;
+		}
+
+		CurActor->Tick();
 	}
+
 }
 
 void ConsoleEngine::Render()
@@ -74,10 +81,43 @@ void ConsoleEngine::Render()
 	Window->Clear();
 
 	ConsoleImage* BackBufferPtr = Window->GetBackBufferPtr();
-	for (size_t i = 0; i < AllActorVector.size(); i++)
+
+	std::list<class AActor*>::iterator StartIter = AllActors.begin();
+	std::list<class AActor*>::iterator EndIter = AllActors.end();
+
+	for (; StartIter != EndIter; ++StartIter)
 	{
-		AllActorVector[i]->Render(BackBufferPtr);
+		AActor* CurActor = StartIter.operator*();
+
+		if (false == CurActor->IsTickable())
+		{
+			continue;
+		}
+
+		CurActor->Render(BackBufferPtr);
 	}
 
 	Window->ScreenRender();
+}
+
+void ConsoleEngine::Release()
+{
+	// 삭제쪽에서는 
+
+	std::list<class AActor*>::iterator StartIter = AllActors.begin();
+	std::list<class AActor*>::iterator EndIter = AllActors.end();
+
+	for (; StartIter != EndIter; )
+	{
+		AActor* CurActor = *StartIter;
+
+		if (false == CurActor->IsDestory())
+		{
+			++StartIter;
+			continue;
+		}
+
+		delete CurActor;
+		StartIter = AllActors.erase(StartIter);
+	}
 }

@@ -42,13 +42,13 @@ void ConsoleImage::Clear(char _Clearchar)
 void ConsoleImage::SetPixel(FIntPoint _Pos, char _Char)
 {
 	// 화면 바깥에 그려지는것 막은것
-	if (0 > _Pos.X || ImageSize.X < _Pos.X)
+	if (0 > _Pos.X || ImageSize.X <= _Pos.X)
 	{
 		return;
 	}
 
 	// 화면 바깥에 그려지는것 막은것.
-	if (0 > _Pos.Y || ImageSize.Y < _Pos.Y)
+	if (0 > _Pos.Y || ImageSize.Y <= _Pos.Y)
 	{
 		return;
 	}
