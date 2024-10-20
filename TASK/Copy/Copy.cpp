@@ -12,7 +12,7 @@ public:
 	Copy(const Copy& _other)
 	{
 		//ptr 생성
-		if (nullptr != Ptr)
+		if (nullptr == Ptr)
 		{
 			this->Ptr = new int();
 		}
@@ -30,7 +30,7 @@ public:
 		}
 	}
 	//복사 대입,자신 참조를 리턴하는게 관행이란다
-	Copy& operator=(const Copy _other)
+	Copy& operator=(const Copy& _other)
 	{
 		//내가 아니면
 		if (this != &_other)
@@ -70,10 +70,10 @@ int main()
 	*C0.Ptr = a0;
 	
 	Copy C2= Copy();
-	//Copy C3 = C0;
+	Copy C3 = C0;
 	*C2.Ptr = a2;
 
-	//C2 = C0;
+	C2 = C0;
 
 	CT.value = C0;
 
