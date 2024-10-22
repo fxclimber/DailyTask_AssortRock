@@ -3,7 +3,6 @@
 #include <vector>
 #include "UVector.h"
 
-
 UVector<int> createVector() {
 	return UVector<int>{1, 2, 3}; // 이동 생성자 호출
 }
@@ -45,12 +44,11 @@ int main()
 
 	}
 
-	std::vector<int> vv = std::vector<int>{ 1,2,3,5 };
+
 
 
 	//-----------UVector------------------------------
 	UVector<int> uv;
-	UVector<int> uv3;
 	//UVector<int> uv2;
 	uv.reserve(11);
 
@@ -64,27 +62,21 @@ int main()
 
 	std::cout << "-------------end-----------------" << std::endl;
 
-	<<<<<< < HEAD
-		UVector<int> uv2 = uv;//내 벡터를 잘못만들었나보다. 벡터카피하니까 프로그램이 문제있는지 콘솔창이 안닫힌다.
-	uv3 = uv2;
-	====== =
-		UVector<int> uv2 = uv;
+	UVector<int> uv2 = uv;
 
 	UVector<int> uv3;
 	uv3 = uv;
-	>>>>>> > ff2a20d1896ec08e5965ff04e65b8687c9b024e0
 
-		for (int i = 0; i < uv2.getCapacity(); i++)
-		{
-			std::cout << "uv2 (" << i << ") : " << uv2[i] << std::endl;
-		}
+	for (int i = 0; i < uv2.getCapacity(); i++)
+	{
+		std::cout << "uv2 (" << i << ") : " << uv2[i] << std::endl;
+	}
 
-	UVector<int> vec = UVector<int>{ 1,2,3 };//왜 안되......??
-	UVector<int> vvv = createVector();
+	UVector<int> vec = createVector(); // 여기서 이동 생성자 호출해야는데 안해...
 
 
 
-	uv.clear();
+	//uv.clear();
 
 	//std::cin.get();
 	return 0;//프로그램 정상종료 
