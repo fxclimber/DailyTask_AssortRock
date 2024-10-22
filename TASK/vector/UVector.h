@@ -14,11 +14,11 @@ public:
 		delete[] UData;
 	}
 
-	UVector(){}
+	UVector() {}
 
 	//복사생성자
 	UVector(const UVector& other)
-		: USize(other.USize),UCapacity(other.UCapacity)
+		: USize(other.USize), UCapacity(other.UCapacity)
 	{
 		if (nullptr != other.UData)
 		{
@@ -36,7 +36,7 @@ public:
 	{
 		UData = other.UData;
 		other.UData = nullptr;
-		
+
 	}
 
 	//특정타입의 인자를 받아서 새객체를 초기화
@@ -61,7 +61,7 @@ public:
 		return UData[_index];
 	}
 	//대입
-	UVector& operator=(const UVector& other) 
+	UVector& operator=(const UVector& other)
 	{
 		//나 체크
 		delete[] UData;
