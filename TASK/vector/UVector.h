@@ -1,5 +1,6 @@
 #pragma once
 #include <assert.h>
+#include <initializer_list>
 
 //typedef size_t DataType;
 // (팁) 코딩중 디버깅용이를 위해, typedef로 했다가, 템플릿으로 바꾸자
@@ -30,6 +31,28 @@ public:
 
 		}
 	}
+	//이동
+	UVector(UVector&& other) noexcept
+	{
+		UData = other.UData;
+		other.UData = nullptr;
+		
+	}
+
+	//특정타입의 인자를 받아서 새객체를 초기화
+	//initializer_list 헤더 필요
+	UVector(std::initializer_list<DataType> values)
+	{
+		USize = values.size();
+		UCapacity = USize;
+		UData = new DataType[UCapacity];
+
+		int index = 0;
+		for (const auto& value : values)
+		{
+			UData[index++] = value;
+		}
+	}
 
 	//인덱스로 요소에 접근
 	DataType& operator[](int _index)
@@ -38,7 +61,7 @@ public:
 		return UData[_index];
 	}
 	//대입
-	DataType& operator=(const UVector& other)
+	UVector& operator=(const UVector& other) 
 	{
 		//나 체크
 		delete[] UData;
@@ -51,12 +74,12 @@ public:
 		//복사
 		for (int i = 0; i < USize; ++i)
 		{
-			UData[i] = other.UData;
+			UData[i] = other.UData[i];
 		}
 
-		//UData = _newUData;
 		return *this;
 	}
+
 
 	void reserve(int _capacity)//메모리할당
 	{
@@ -97,7 +120,6 @@ public:
 	{
 		return USize;
 	}
-
 
 
 

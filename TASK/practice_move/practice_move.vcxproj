@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5dd09a05-4d18-41dc-800a-b7ff2817c921}</ProjectGuid>
-    <RootNamespace>App</RootNamespace>
+    <ProjectGuid>{60469593-6e6b-4857-83a5-c9c3de25e1a2}</ProjectGuid>
+    <RootNamespace>practicemove</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,7 +104,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +118,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,18 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="App.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EngineBase\EngineBase.vcxproj">
-      <Project>{47e3aad8-cc6c-46c3-86c8-b7ca1a81da66}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\EngineCore\EngineCore.vcxproj">
-      <Project>{f83ba35a-295f-4844-add0-06fda7cba5f0}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\TetrisContents\TetrisContents.vcxproj">
-      <Project>{b1be8ba5-d2f0-4850-81e0-06f8e96ac425}</Project>
-    </ProjectReference>
+    <ClCompile Include="CopyElision.cpp" />
+    <ClCompile Include="RValue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
