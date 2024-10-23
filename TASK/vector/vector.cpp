@@ -7,9 +7,44 @@ UVector<int> createVector() {
 	return UVector<int>{1, 2, 3}; // 이동 생성자 호출
 }
 
+#pragma region 예외처리
+
+//throw(int) 같은 구문은 이제 더 이상 사용되지 않으며, 
+// noexcept 키워드를 사용하는 것이 현대 C++ 스타일에 맞습니다.
+void test()throw(int)
+{
+	if (true)
+	{
+		throw 10;//내가 문제를 주면,밖에서 해결해..? 누가 밖이야?
+		//지금은 둘다 사용안할거임assert사용.
+	}
+}
+
+int Error() noexcept
+{
+	//내부에서 처리할거다.
+	//문제가 생겨도 밖으로 영향주지 않는다.
+	return 10;
+}
+
+
+#pragma endregion
+
 
 int main()
 {
+
+#pragma region 예외처리
+
+	try 
+	{
+		test();  // 예외를 던지는 함수 호출
+	}
+	catch (const int& value) {  // int 타입 예외를 참조로 받음
+		std::cout << "Caught exception: " << value << std::endl;
+	}
+#pragma endregion
+
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 	{
@@ -23,6 +58,7 @@ int main()
 		v.reserve(100);
 		std::cout << "v.capacity()" << v.capacity() << std::endl;
 
+		
 
 		for (int i = 0; i < 100; ++i)
 		{
@@ -37,10 +73,12 @@ int main()
 		v3 = v;
 
 
-
 		v.clear();
 		std::cout << "v.capacity()" << v.capacity() << std::endl;
 		std::cout << "v.size()" << v.size() << std::endl;
+
+
+
 
 	}
 
@@ -73,11 +111,17 @@ int main()
 	}
 
 	UVector<int> vec = createVector(); // 여기서 이동 생성자 호출해야는데 안해...
-
+	UVector<int> vv1 = UVector<int>();
 
 
 	//uv.clear();
 
 	//std::cin.get();
+
+
+
+
+
+
 	return 0;//프로그램 정상종료 
 }

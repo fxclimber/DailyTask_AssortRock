@@ -1,6 +1,6 @@
 #include <iostream>
 #include "UList.h"
-
+#include <list>
 
 int main()
 {
@@ -42,6 +42,8 @@ int main()
 	//	}
 	}
 
+	std::list<int> li;
+	
 
 	UList<int> list;
 	list.push_back(1);

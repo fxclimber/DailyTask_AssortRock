@@ -163,6 +163,8 @@ std::cout << "-------align ABS----------------------------------------" << std::
 	myCustomMap.emplace(4,"four");
 	myCustomMap.emplace(-10,"ten");
 
+	myCustomMap.contains(3);
+
 	for (const auto& pair : myCustomMap)
 	{
 		std::cout << pair.first << ":" << pair.second << std::endl;

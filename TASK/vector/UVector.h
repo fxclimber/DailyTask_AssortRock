@@ -31,6 +31,7 @@ public:
 
 		}
 	}
+
 	//이동
 	UVector(UVector&& other) noexcept
 	{
@@ -38,6 +39,8 @@ public:
 		other.UData = nullptr;
 
 	}
+
+
 
 	//특정타입의 인자를 받아서 새객체를 초기화
 	//initializer_list 헤더 필요
